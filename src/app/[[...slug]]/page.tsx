@@ -5,6 +5,8 @@ import { PageComponent } from '@/lib/core/component'
 import client from '@/sanity/client'
 import { pageQuery, pagesQuery, seoQuery, settingsQuery } from '@/sanity/queries'
 
+import { notFoundMetadata } from '../not-found'
+
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const slug = params.slug
 
@@ -13,10 +15,21 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   )
 
   const layout = await client.fetch<{ afterTitle: string }>(settingsQuery())
+  if (!seo)
+    return {
+      ...notFoundMetadata,
+      title: notFoundMetadata.title + layout.afterTitle,
+    }
+
+  if (seo?.metaTitle)
+    return {
+      title: seo?.metaTitle,
+      description: seo.metaDescription,
+    }
 
   return {
-    title: seo?.metaTitle ?? seo.title + layout.afterTitle,
-    description: seo.metaDescription,
+    title: seo?.title ?? '' + layout.afterTitle,
+    description: seo?.metaDescription,
   }
 }
 

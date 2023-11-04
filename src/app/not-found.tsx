@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 
 import Link from '@/components/Atoms/Button/Button'
 
-export const metadata: Metadata = {
+export const notFoundMetadata: Metadata = {
   title: '404',
   description: '404 - Pagina non trovata',
 }

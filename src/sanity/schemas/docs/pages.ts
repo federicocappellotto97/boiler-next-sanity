@@ -27,6 +27,7 @@ export default defineType({
       name: 'seo',
       type: 'seo',
       title: 'SEO',
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       title: 'Components',
