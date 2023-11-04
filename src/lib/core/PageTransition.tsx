@@ -23,7 +23,7 @@ export default function PageTransition({ children }: PropsWithChildren) {
 
   return (
     <AnimatePresence mode="wait" initial={false} onExitComplete={() => window.scrollTo(0, 0)}>
-      <div key={'fila-' + pathname} className="contents">
+      <div key={pathname} className="contents">
         {Array.from(Array(5).keys()).map((_, i) => (
           <Fragment key={i}>
             <motion.div
@@ -54,7 +54,7 @@ export default function PageTransition({ children }: PropsWithChildren) {
         ))}
         <FrozenRouter>
           <AnimatePresence>
-            <div key="child" className="contents">
+            <div key="page-transition-child" className="contents">
               {children}
             </div>
           </AnimatePresence>

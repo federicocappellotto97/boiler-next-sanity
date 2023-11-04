@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const layout = await client.fetch<{ afterTitle: string }>(settingsQuery())
 
   return {
-    title: seo.metaTitle ?? seo.title + layout.afterTitle,
+    title: seo?.metaTitle ?? seo.title + layout.afterTitle,
     description: seo.metaDescription,
   }
 }

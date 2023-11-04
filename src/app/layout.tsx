@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default async function PageLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="it">
+    <html lang="en">
       <body className={cx(inter.className, 'flex min-h-screen flex-col bg-white')}>
         <PageTransition>
           <NextTopLoader color="black" />
