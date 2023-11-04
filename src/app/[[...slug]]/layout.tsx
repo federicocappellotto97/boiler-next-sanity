@@ -8,20 +8,20 @@ import { settingsQuery } from '@/sanity/queries'
 export const revalidate = 60
 
 async function getLayout() {
-    const layout = await client.fetch(settingsQuery())
+  const layout = await client.fetch(settingsQuery())
 
-    return layout
+  return layout
 }
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
-    const layout = await getLayout()
-    return (
-        <Context layout={layout}>
-            <Lenis>
-                <Header />
-                <main className="flex flex-1 flex-col">{children}</main>
-                <Footer />
-            </Lenis>
-        </Context>
-    )
+  const layout = await getLayout()
+  return (
+    <Context layout={layout}>
+      <Lenis>
+        <Header />
+        <main className="flex flex-1 flex-col">{children}</main>
+        <Footer />
+      </Lenis>
+    </Context>
+  )
 }

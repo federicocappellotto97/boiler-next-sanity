@@ -1,4 +1,5 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
+
 const Spacer = defineType({
   name: 'Spacer',
   type: 'object',
@@ -18,8 +19,7 @@ const Spacer = defineType({
       type: 'number',
       validation: (Rule) => Rule.min(0),
       initialValue: 0,
-      description:
-        'Height in pixels. If not set, the height will be the same as the desktop height',
+      description: 'Height in pixels. If not set, the height will be the same as the desktop height',
     }),
   ],
   preview: {

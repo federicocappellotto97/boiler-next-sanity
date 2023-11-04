@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
  * Used by @lib/components/PageComponent
  */
 export const PAGE_COMPONENTS = {
-    /* PAGE_COMPONENTS */
-    Hero: dynamic(() => import('@/components/Organisms/Hero/Hero')),
-    Spacer: dynamic(() => import('@/components/Organisms/Spacer/Spacer')),
+  /* PAGE_COMPONENTS */
+  Hero: dynamic(() => import('@/components/Organisms/Hero/Hero')),
+  Spacer: dynamic(() => import('@/components/Organisms/Spacer/Spacer')),
 }

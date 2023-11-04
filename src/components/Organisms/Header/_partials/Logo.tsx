@@ -6,13 +6,13 @@ import { useContext } from 'react'
 import { SettingsContext } from '@/lib/core/context'
 
 const Logo = () => {
-    const { title } = useContext(SettingsContext)
+  const { title } = useContext(SettingsContext)
 
-    return (
-        <Link href="/" aria-label={title} title={title}>
-            Logo
-        </Link>
-    )
+  return (
+    <Link href="/" aria-label={title} title={title}>
+      Logo
+    </Link>
+  )
 }
 
 export default Logo

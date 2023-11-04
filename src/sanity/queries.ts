@@ -1,5 +1,5 @@
 export const pageQuery = (slug?: string) => /* groq */ `*[_type == 'pages' && slug.current == '${
-    slug ?? 'homepage'
+  slug ?? 'homepage'
 }'][0]{
       title, 
       "slug": slug.current,
@@ -22,7 +22,7 @@ export const pageQuery = (slug?: string) => /* groq */ `*[_type == 'pages' && sl
   }`
 
 export const seoQuery = (slug?: string) => /* groq */ `*[_type == 'pages' && slug.current == '${
-    slug ?? 'homepage'
+  slug ?? 'homepage'
 }'][0]{
         title,
         "metaTitle":seo.metaTitle,
@@ -38,7 +38,7 @@ export const settingsQuery = () => /* groq */ `*[_type == 'settings'][0]{
 }`
 
 export const pagesQuery = (withHomepage = true) => /* groq */ `*[_type == 'pages' ${
-    withHomepage ? '' : "&& slug.current != 'homepage'"
+  withHomepage ? '' : "&& slug.current != 'homepage'"
 }]{
     "title": title,
     "metaDescription": metaDescription,

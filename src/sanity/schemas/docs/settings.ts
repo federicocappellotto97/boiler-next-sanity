@@ -1,5 +1,5 @@
-import {defineType, defineField} from 'sanity'
-import {WrenchIcon} from '@sanity/icons'
+import { WrenchIcon } from '@sanity/icons'
+import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'settings',
@@ -29,7 +29,7 @@ export default defineType({
           {
             name: 'email', //Error message is "Does not match email-pattern"
             invert: false, //Boolean to allow any value that does NOT match pattern
-          },
+          }
         ),
     }),
     defineField({

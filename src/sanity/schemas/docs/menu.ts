@@ -1,5 +1,5 @@
-import {defineType, defineField} from 'sanity'
-import {MenuIcon} from '@sanity/icons'
+import { MenuIcon } from '@sanity/icons'
+import { defineField, defineType } from 'sanity'
 
 export default defineType({
   name: 'menu',
@@ -17,7 +17,7 @@ export default defineType({
       name: 'items',
       title: 'Items',
       type: 'array',
-      of: [{type: 'menuItem'}],
+      of: [{ type: 'menuItem' }],
     }),
     defineField({
       name: 'language',
@@ -32,7 +32,7 @@ export default defineType({
       subtitle: 'items',
       language: 'language',
     },
-    prepare({title, subtitle, language}) {
+    prepare({ title, subtitle, language }) {
       return {
         title: title.charAt(0).toUpperCase() + title.slice(1),
         subtitle: Array.isArray(subtitle)

@@ -3,5 +3,5 @@
 import { ReactLenis } from '@studio-freight/react-lenis'
 
 export default function Lenis({ children }: { children: React.ReactNode }) {
-    return <ReactLenis root>{children}</ReactLenis>
+  return <ReactLenis root>{children}</ReactLenis>
 }

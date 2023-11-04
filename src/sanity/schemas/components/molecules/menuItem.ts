@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity'
+import { defineField, defineType } from 'sanity'
 
 const menuItem = defineType({
   name: 'menuItem',
@@ -15,7 +15,7 @@ const menuItem = defineType({
     select: {
       title: 'link.label',
     },
-    prepare({title}) {
+    prepare({ title }) {
       return {
         title: title,
       }
