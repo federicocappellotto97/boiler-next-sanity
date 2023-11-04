@@ -1,3 +1,4 @@
+import { WrenchIcon } from '@sanity/icons'
 import { visionTool } from '@sanity/vision'
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
@@ -21,6 +22,12 @@ export default defineConfig({
               S.listItem()
                 .title(capitalizeFirstLetter(single))
                 .id(single)
+                .icon(
+                  S.documentTypeListItems()
+                    .find((listItem) => listItem.getId() == single)
+                    //@ts-ignore
+                    ?.getSchemaType()?.icon
+                )
                 .child(S.document().schemaType(single).documentId(single).title(capitalizeFirstLetter(single)))
             ),
 

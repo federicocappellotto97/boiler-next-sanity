@@ -3,7 +3,9 @@
 
 import { NextStudio } from 'next-sanity/studio'
 
-import config from '../../../../sanity.config'
+import config from '../../../../../sanity.config'
+
+// ./src/app/studio/[[...index]]/Studio.tsx
 
 // ./src/app/studio/[[...index]]/Studio.tsx
 
