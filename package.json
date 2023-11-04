@@ -1,27 +1,44 @@
 {
-  "name": "boiler-next-sanity",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.0.1"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "autoprefixer": "^10.0.1",
-    "postcss": "^8",
-    "tailwindcss": "^3.3.0",
-    "eslint": "^8",
-    "eslint-config-next": "14.0.1"
-  }
+    "name": "boiler-next-sanity",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint",
+        "format": "prettier --write . --config ./prettier.config.js"
+    },
+    "dependencies": {
+        "@portabletext/react": "^3.0.11",
+        "@sanity/vision": "^3.19.1",
+        "@studio-freight/react-lenis": "^0.0.36",
+        "development": "^0.0.6",
+        "framer-motion": "^10.16.4",
+        "next": "14.0.1",
+        "next-sanity": "^5.5.10",
+        "nextjs-toploader": "^1.6.4",
+        "react": "^18",
+        "react-dom": "^18",
+        "sanity": "^3.19.1",
+        "styled-components": "^6.1.0"
+    },
+    "devDependencies": {
+        "@sanity/eslint-config-studio": "^3.0.1",
+        "@trivago/prettier-plugin-sort-imports": "^4.2.1",
+        "@types/node": "^20",
+        "@types/react": "^18",
+        "@types/react-dom": "^18",
+        "autoprefixer": "^10.0.1",
+        "cva": "beta",
+        "eslint": "^8",
+        "eslint-config-next": "14.0.1",
+        "postcss": "^8",
+        "prettier": "^3.0.3",
+        "prettier-plugin-tailwindcss": "^0.5.6",
+        "tailwind-merge": "^2.0.0",
+        "tailwindcss": "^3.3.0",
+        "typescript": "^5"
+    },
+    "packageManager": "bun@1.0.3"
 }
