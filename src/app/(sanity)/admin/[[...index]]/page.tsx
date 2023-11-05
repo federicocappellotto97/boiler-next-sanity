@@ -1,4 +1,3 @@
-// ./src/app/studio/[[...index]]/page.tsx
 import { Studio } from './Studio'
 
 // Ensures the Studio route is statically generated
