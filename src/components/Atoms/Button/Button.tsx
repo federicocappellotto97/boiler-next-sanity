@@ -35,9 +35,9 @@ const Button = (props: Common & (Button | Link)) => {
             {children}
           </Link>
         ) : (
-          <Button onClick={onClick} {...commonAtts}>
+          <button onClick={onClick} {...commonAtts}>
             {children}
-          </Button>
+          </button>
         )
       }
     >
